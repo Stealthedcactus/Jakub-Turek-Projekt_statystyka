@@ -2,7 +2,7 @@
 
 Aby uruchomić serwer w dockerze należy wykonać polecenia:
 1. docker build --tag flask-server .
-2. docker run --name server -d -p 5000:5000 server
+2. docker run --name server -d -p 5000:5000 flask-server
 
 
 # Opis plików
