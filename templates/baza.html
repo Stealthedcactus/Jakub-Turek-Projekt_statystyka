@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+
+
+table {
+	margin: 0 auto;
+	font-size: 30;
+	}
+
+th {
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	text-align: center;
+	}
+td {
+	padding: 10px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	}
+</style>
+
+<div>
+	<table>
+	  <tr>
+		<th>ID</th>
+		<th>Imię</th>
+		<th>Płeć</th>
+		<th>Data zapytania</th>
+	  </tr>
+		{% for log in logi %}
+	  <tr>
+		<td>{{log.id}}</td>
+		<td>{{ log.imie }}</td>
+		<td>{{ log.plec }}</td>
+		<td>{{log.DATETIME}}</td>
+	  </tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}
+
+

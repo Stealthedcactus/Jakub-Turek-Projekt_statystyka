@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+	.center {
+	  margin: auto;
+	  padding: 10px;
+	  text-align: center;
+	}
+	input{
+		padding: 15
+		
+	}
+	h1 {
+	font-size: 70
+	}
+</style>
+
+	<div class="center">
+		{% if user%}
+		<h1>{{ user }} to {{ gender }}</h1>
+		{% else %}
+		<h1>Podaj jakieś imię </h1>
+		{% endif %}
+			
+		<form autocomplete="off"  action="{{ url_for('sprawdzanie') }}" method="post">
+		  <input class="textbox" type="text"  name="INPUT_FROM_USER" ><br>
+		  <input type="submit">
+		</form> 
+	</div>
+		
+{% endblock %}
